@@ -462,10 +462,10 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <form class="form-modal">
-          <p class="">Оставьте свои данные, мы вам перезвоним</p>
-          <label for="user" class="form-modal-label">Имя</label>
+          <p class="form-modal-text">Оставьте свои данные, мы вам перезвоним</p>
+          <label for="username" class="form-modal-label">Имя</label>
           <div class="field-wrap">
-            <input type="text" class="form-modal-field" name="username" id="user" />
+            <input type="text" class="form-modal-field" name="username" id="username" />
             <svg class="form-modal-icon" width="18" height="18">
               <use href="images/icons.svg#black-person"></use>
             </svg>
@@ -487,14 +487,16 @@
           <label for="comment" class="form-modal-label">Комментарий</label>
           <textarea
             name="comment"
-            class="modal-form-comment"
+            class="form-modal-comment"
             id="comment"
             placeholder="Введите текст"
           ></textarea>
-          <p class="form-modal-license">
-            Соглашаюсь с рассылкой и принимаю
+          <label class="form-modal-license" for="license"
+            >Соглашаюсь с рассылкой и принимаю
             <a href="" class="form-modal-link"> Условия договора</a>
-          </p>
+            <input type="checkbox" name="license" id="license" />
+          </label>
+
           <button type="submit" class="form-modal-btn">Отправить</button>
         </form>
         <button class="close-button" type="button" data-modal-close>
