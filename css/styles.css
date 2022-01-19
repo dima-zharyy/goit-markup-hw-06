@@ -878,9 +878,13 @@ img {
   width: 30px;
   height: 30px;
 
+  color: #000000;
+
   background: var(--primary-white-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-icon {
@@ -888,6 +892,12 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  fill: currentColor;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: var(--accent-color);
 }
 
 /* Форма в модальнм окне */
@@ -928,6 +938,8 @@ img {
   border-radius: 4px;
 
   outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .field-wrap {
@@ -939,6 +951,16 @@ img {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
+  fill: #000000;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-field:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form-modal-field:focus + .form-modal-icon {
+  fill: var(--accent-color);
 }
 
 .form-modal-comment {
@@ -959,6 +981,12 @@ img {
 
   resize: none;
   outline: none;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-modal-comment:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .form-modal-comment::placeholder {
@@ -970,7 +998,8 @@ img {
 }
 
 .form-modal-license {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
 
   font-size: 14px;
@@ -980,7 +1009,26 @@ img {
   color: var(--secondary-text-color);
 }
 
+.custom-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 8.38px;
+
+  border: 2px solid var(--secondary-title-color);
+  border-radius: 2px;
+}
+
+.form-modal-checkbox:checked + .custom-checkbox {
+  border-color: transparent;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+}
+
 .form-modal-link {
+  display: inline-block;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;

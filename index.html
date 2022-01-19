@@ -470,6 +470,7 @@
               <use href="images/icons.svg#black-person"></use>
             </svg>
           </div>
+
           <label for="tel" class="form-modal-label">Телефон</label>
           <div class="field-wrap">
             <input type="tel" class="form-modal-field" name="tel" id="tel" />
@@ -477,6 +478,7 @@
               <use href="images/icons.svg#black-tel"></use>
             </svg>
           </div>
+
           <label for="email" class="form-modal-label">Почта</label>
           <div class="field-wrap">
             <input type="email" class="form-modal-field" name="email" id="email" />
@@ -484,6 +486,7 @@
               <use href="images/icons.svg#black-env"></use>
             </svg>
           </div>
+
           <label for="comment" class="form-modal-label">Комментарий</label>
           <textarea
             name="comment"
@@ -491,10 +494,17 @@
             id="comment"
             placeholder="Введите текст"
           ></textarea>
-          <label class="form-modal-license" for="license"
-            >Соглашаюсь с рассылкой и принимаю
-            <a href="" class="form-modal-link"> Условия договора</a>
-            <input type="checkbox" name="license" id="license" />
+
+          <label class="form-modal-license">
+            <input
+              class="form-modal-checkbox visually-hidden"
+              type="checkbox"
+              name="license"
+              value="agreed"
+            />
+            <span class="custom-checkbox"></span>
+            Соглашаюсь с рассылкой и принимаю&nbsp
+            <a href="" class="form-modal-link">Условия договора</a>
           </label>
 
           <button type="submit" class="form-modal-btn">Отправить</button>
