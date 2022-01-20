@@ -955,13 +955,11 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-modal-field:focus,
-.form-modal-field:hover {
+.form-modal-field:focus {
   border: 1px solid var(--accent-color);
 }
 
-.form-modal-field:focus + .form-modal-icon,
-.form-modal-field:hover + .form-modal-icon {
+.form-modal-field:focus + .form-modal-icon {
   fill: var(--accent-color);
 }
 
