@@ -761,7 +761,7 @@ img {
   text-transform: uppercase;
 }
 
-.form-subscribe-label {
+.form-subscribe-container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
