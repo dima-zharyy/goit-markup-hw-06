@@ -983,8 +983,7 @@ img {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-modal-comment:focus,
-.form-modal-comment:hover {
+.form-modal-comment:focus {
   border: 1px solid var(--accent-color);
 }
 
